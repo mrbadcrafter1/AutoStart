@@ -473,7 +473,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-@media (max-width: 1024px) {
+@media (max-width:1366px) and (min-width:1024px) {
     * {
         font-size: 20px;
     }
