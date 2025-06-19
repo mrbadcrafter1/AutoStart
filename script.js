@@ -1,5 +1,5 @@
+//дляскролла
 document.addEventListener('DOMContentLoaded', function() {
-    // Плавная прокрутка для якорных ссылок
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             if (this.getAttribute('href') !== '#') {
@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Тень для шапки при скролле
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
         if (window.scrollY > 100) {
@@ -23,26 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
             header.style.boxShadow = 'none';
         }
     });
-
-    // Инициализация мобильного меню
+    //мобилка
     function initMobileMenu() {
         const nav = document.querySelector('nav ul');
         const burger = document.createElement('div');
         burger.className = 'mobile-menu-btn';
         burger.innerHTML = '☰';
-        
-        // Вставляем бургер после логотипа
         const logo = document.querySelector('.logo');
         logo.parentNode.insertBefore(burger, logo.nextSibling);
-        
         function toggleMenu() {
             const isOpen = nav.style.display === 'block';
             nav.style.display = isOpen ? 'none' : 'block';
             burger.innerHTML = isOpen ? '☰' : '×';
         }
-        
         burger.addEventListener('click', toggleMenu);
-        
         function checkScreenSize() {
             if (window.innerWidth <= 768) {
                 burger.style.display = 'flex';
@@ -54,11 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 nav.classList.remove('mobile-nav');
             }
         }
-        
-        // Проверяем размер сразу при загрузке
         checkScreenSize();
-        
-        // Оптимизированный обработчик изменения размера
         let resizeTimer;
         window.addEventListener('resize', function() {
             clearTimeout(resizeTimer);
@@ -66,12 +54,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     initMobileMenu();
-
-    // Модальные окна
+    //новостимод
     const modalBtns = document.querySelectorAll('.news-btn');
     const modals = document.querySelectorAll('.modal');
     const closeBtns = document.querySelectorAll('.close, .close-modal-btn');
-    
     modalBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             const modalId = this.getAttribute('data-modal');
@@ -80,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'hidden';
         });
     });
-    
     closeBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             const modal = this.closest('.modal');
@@ -88,22 +73,19 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'auto';
         });
     });
-    
     window.addEventListener('click', function(e) {
         if (e.target.classList.contains('modal')) {
             e.target.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
     });
-
-    // Форма заявки на обучение
+    //курсызаявка
     if (document.getElementById('enroll-form')) {
         const categoryBtns = document.querySelectorAll('.category-btn, .enroll-btn');
         const vehicleImages = document.querySelectorAll('.vehicle-img');
         const categoryInput = document.getElementById('category');
         const form = document.getElementById('driver-license-form');
-        const successModal = document.getElementById('success-modal');
-        
+        const successModal = document.getElementById('success-modal'); 
         function selectCategory(category) {
             document.querySelectorAll('.category-btn').forEach(btn => {
                 btn.classList.remove('active');
@@ -111,19 +93,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     btn.classList.add('active');
                 }
             });
-            
             vehicleImages.forEach(img => {
                 img.classList.remove('active');
                 if (img.getAttribute('data-category') === category) {
                     img.classList.add('active');
                 }
             });
-            
             if (categoryInput) {
                 categoryInput.value = category;
             }
         }
-        
         categoryBtns.forEach(btn => {
             btn.addEventListener('click', function() {
                 const category = this.getAttribute('data-category') || 
@@ -136,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-        
         if (form) {
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
@@ -146,19 +124,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 selectCategory('A');
             });
         }
-        
         selectCategory('A');
     }
-
-    // Подсветка активной ссылки в навигации
+    //открытая ссылка
     function highlightActiveNavLink() {
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('nav ul li a');
-        
         navLinks.forEach(link => {
             const linkPage = link.getAttribute('href').split('/').pop();
             link.classList.remove('active');
-            
             if ((currentPage === 'index.html' && linkPage === '#about') || 
                 (currentPage === linkPage) || 
                 (currentPage === '' && linkPage === 'index.html')) {
