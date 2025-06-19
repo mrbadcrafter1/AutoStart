@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>АвтоСтарт - Новейшая автошкола</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="АвтоСтарт">
+                <a href="index.html" style="text-decoration: none;"><h1>АвтоСтарт</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="course.html">Курсы</a></li>
+                    <li><a href="#news">Новости</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-contacts">
+                <div class="phone">+7 000 000-00-00</div>
+            </div>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Профессиональное обучение вождению</h1>
+                <p>Получите права с первого раза!</p>
+                <a href="course.html" class="btn">Выбрать курс</a>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Почему выбирают нашу автошколу?</h2>
+            <div class="about-features">
+                <div class="feature">
+                    <h3>Новейшая автошкола</h3>
+                    <p>Обучение с помощью новейших технологиях</p>
+                </div>
+                <div class="feature">
+                    <h3>Квалифицированные инструкторы</h3>
+                    <p>Опытные преподаватели с педагогическим образованием</p>
+                </div>
+                <div class="feature">
+                    <h3>98% сдачи с первого раза</h3>
+                    <p>Высокий процент успешной сдачи экзаменов в ГИБДД</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="news" class="news">
+        <div class="container">
+            <h2>Последние новости</h2>
+            <div class="news-cards">
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('images/news1.jpg');"></div>
+                    <div class="news-content">
+                        <div class="news-date">10.06.2025</div>
+                        <h3>Новый набор в группу</h3>
+                        <p>Открыт набор в новую группу на июль. Спешите записаться!</p>
+                        <button class="btn news-btn" data-modal="modal1">Подробнее</button>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('images/news2.jpg');"></div>
+                    <div class="news-content">
+                        <div class="news-date">31.05.2025</div>
+                        <h3>Акция для студентов</h3>
+                        <p>Специальные скидки для студентов на все курсы обучения.</p>
+                        <button class="btn news-btn" data-modal="modal2">Подробнее</button>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('images/news3.jpg');"></div>
+                    <div class="news-content">
+                        <div class="news-date">05.06.2025</div>
+                        <h3>Новый автодром</h3>
+                        <p>Открытие нового современного автодрома в центре города.</p>
+                        <button class="btn news-btn" data-modal="modal3">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+            </div>
+        </div>
+    </section>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Новый набор в группу</h2>
+            <p><strong>10.06.2025</strong></p>
+            <img src="images/news1.jpg" alt="Новый набор" class="modal-img">
+            <p>Автошкола "АвтоСтарт" объявляет о наборе в новую группу обучения, которая начнет занятия с 1 июля 2025 года. В программе:</p>
+            <ul>
+                <li>Теоретические занятия по ПДД</li>
+                <li>Практические занятия на новом автодроме</li>
+                <li>Подготовка к экзаменам в ГИБДД</li>
+                <li>Индивидуальный подход к каждому ученику</li>
+            </ul>
+            <p>Количество мест ограничено! Записывайтесь заранее, чтобы гарантированно попасть в группу.</p>
+            <a href="course.html" class="btn">Записаться на курс</a>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Акция для студентов</h2>
+            <p><strong>31.05.2025</strong></p>
+            <img src="images/news2.jpg" alt="Акция для студентов" class="modal-img">
+            <p>Специальное предложение для студентов всех учебных заведений!</p>
+            <p>При предъявлении студенческого билета вы получаете:</p>
+            <ul>
+                <li>Скидку 15% на все категории обучения</li>
+                <li>Бесплатный дополнительный час практики</li>
+                <li>Гибкий график занятий, подстроенный под ваше расписание</li>
+            </ul>
+            <p>Акция действует до 31 августа 2025 года. Успейте воспользоваться выгодным предложением!</p>
+            <a href="course.html" class="btn">Записаться со скидкой</a>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Новый автодром</h2>
+            <p><strong>05.06.2025</strong></p>
+            <img src="images/news3.jpg" alt="Новый автодром" class="modal-img">
+            <p>Мы рады сообщить об открытии нового современного автодрома в центре города!</p>
+            <p>Особенности нового автодрома:</p>
+            <ul>
+                <li>Площадь 5000 кв.м с различными типами дорожного покрытия</li>
+                <li>Полностью соответствующая требованиям ГИБДД площадка для сдачи экзаменов</li>
+                <li>Ночное освещение для вечерних занятий</li>
+                <li>Электронная система оценки выполнения упражнений</li>
+            </ul>
+            <p>Теперь обучение стало еще комфортнее и эффективнее!</p>
+            <a href="contacts.html" class="btn">Посмотреть на карте</a>
+        </div>
+    </div>
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>АвтоСтарт</h3>
+                    <p>Новая автошкола 2025 года. Обучаем вождению по современным методикам.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>г. Омск, ул. проспект Комарова, 27/2</li>
+                        <li>+7 000 000-00-00</li>
+                        <li>info@autostart.ru</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Часы работы</h3>
+                    <ul>
+                        <li>Пн-Пт: 9:00 - 20:00</li>
+                        <li>Сб: 10:00 - 18:00</li>
+                        <li>Вс: выходной</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 АвтоСтарт. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

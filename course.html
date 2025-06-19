@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АвтоСтарт - Категории прав</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="АвтоСтарт">
+                <a href="index.html" style="text-decoration: none;"><h1>АвтоСтарт</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">О нас</a></li>
+                    <li><a href="course.html">Курсы</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-contacts">
+                <div class="phone">+7 000 000-00-00</div>
+            </div>
+        </div>
+    </header>
+    <section id="enroll-form" class="enroll-form-section">
+        <div class="container form-container">
+            <div class="form-content">
+                <div class="vehicle-display">
+                    <div class="vehicle-image" id="vehicle-image">
+                        <img src="images/course1.jpg" alt="Мотоцикл" class="vehicle-img active" data-category="A">
+                        <img src="images/course2.jpg" alt="Легковой автомобиль" class="vehicle-img" data-category="B">
+                        <img src="images/course3.jpg" alt="Грузовой автомобиль" class="vehicle-img" data-category="C">
+                        <img src="images/course4.jpg" alt="Автобус" class="vehicle-img" data-category="D">
+                        <img src="images/course5.jpg" alt="Транспорт с прицепом" class="vehicle-img" data-category="E">
+                    </div>
+                </div>
+                <div class="license-form">
+                    <h2>Заявка на обучение</h2>
+                    <form id="driver-license-form">
+                        <div class="form-group">
+                            <label for="fullname">ФИО</label>
+                            <input type="text" id="fullname" name="fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Категория прав</label>
+                            <div class="category-buttons">
+                                <button type="button" class="category-btn active" data-category="A">A</button>
+                                <button type="button" class="category-btn" data-category="B">B</button>
+                                <button type="button" class="category-btn" data-category="C">C</button>
+                                <button type="button" class="category-btn" data-category="D">D</button>
+                                <button type="button" class="category-btn" data-category="E">E</button>
+                            </div>
+                            <input type="hidden" id="category" name="category" value="A">
+                        </div>
+                        <button type="submit" class="btn submit-btn">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Заявка отправлена!</h2>
+            <p>Спасибо за вашу заявку на обучение в автошколе "АвтоСтарт".</p>
+            <p>Наш менеджер свяжется с вами в ближайшее время для подтверждения заявки и уточнения деталей.</p>
+            <button class="btn close-modal-btn">Закрыть</button>
+        </div>
+    </div>
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>АвтоСтарт</h3>
+                    <p>Новая автошкола 2025 года. Обучаем вождению по современным методикам.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>г. Омск, ул. проспект Комарова, 27/2</li>
+                        <li>+7 000 000-00-00</li>
+                        <li>info@autostart.ru</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Часы работы</h3>
+                    <ul>
+                        <li>Пн-Пт: 9:00 - 20:00</li>
+                        <li>Сб: 10:00 - 18:00</li>
+                        <li>Вс: выходной</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 АвтоСтарт. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
